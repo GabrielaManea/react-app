@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+}
+
+.container > .btn-click {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.container > .btn-click >  a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  padding: 15px 20px;
+  border: 1px solid green;
+}
+
+.register-container {
+  width: 30vw;
+  height: 60vh;
+  margin: 10% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid red;
+  padding: 1% 0 5% 0;
+}
+
+.register-container > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 70%;
+}
+ 
+
+.register-container > form > .form-container {
+  height: 80px;
+  width: 100%;
+  font-size: 18px;
+  outline: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-container > form > .form-container > input {
+  height: 40px;
+  width: 50%;
+  outline: 0;
+  font-size: 18px;
+}
+
+.register-container > form > .form-container > .invalid {
+  border: 1px solid red;
+}
+
+.register-container > form > .form-container > .invalid-msg {
+  color: red;
+  font-size: 14px;
+  padding-bottom: 2px;
+  text-align: center;
+}
+
+.register-container > form >  button {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding: 5px 10px;
+  border: 1px solid black;
+  outline: 0;
+}
+
+.register > .register-back{
+  margin: 20px;
+}
+
+.register > .register-back a {
+  text-decoration: none;
+  font-size: 18px;
+  color:red;
+  padding: 10px;
+}
+
+.register > .register-back a:active {
+  border: 1px solid red;
+}
+
+.todo-back{
+  margin: 20px;
+}
+
+.todo-back a {
+  text-decoration: none;
+  font-size: 18px;
+  color:red;
+  padding: 10px;
+}
+
+.todo-back a:active {
+  border: 1px solid red;
+}
