@@ -2,10 +2,10 @@ import React from 'react';
 import { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-import Navigation from './components/Navigation';
-import Start from './components/Start';
-import Register from './components/Register';
-import Todolist from './components/Todolist';
+import Navigation from './components/navigation';
+import Start from './components/start';
+import Register from './components/register';
+import Todo from './components/todo';
 import history from './components/history'
 
 
@@ -17,9 +17,9 @@ export default class App extends Component {
           <div>
             <Navigation history={history} />
               <Switch>
-               <Route  exact={true} path="/" component={Start}/>
-               <Route  exact path="/Register" component={Register}/>
-               <Route  exact path="/ToDoList" component={Todolist}/>
+               <Route  exact={true} path="/start" component={Start}/>
+               <Route  exact path="/register" component={Register}/>
+               <Route  exact path="/todo" component={Todo}/>
               </Switch>
           </div> 
       </BrowserRouter>

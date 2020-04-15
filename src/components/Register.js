@@ -3,6 +3,7 @@ import '../App.css';
 import'./history';
 
 
+
 const regExp = RegExp(
     /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/
 )
@@ -94,6 +95,21 @@ class Register extends React.Component {
         })
     };
 
+    isRegisterBtnDisabled = () => {
+        const { name, email, password, cpassword, error } = this.state;
+    
+        if (!name || !email || !password || !cpassword) {
+          return true;
+        }
+        const foundError = Object.values(error).some((e) => e.length > 0);
+    
+        if (foundError) {
+          return true;
+        }
+    
+        return false;
+      };
+
     render() {
         const { error } = this.state;
         return(
@@ -152,7 +168,7 @@ class Register extends React.Component {
                     )}
                 </div>
 
-                <button type="submit" className="btn" disabled = { (this.state.error > 0) ? true : false}>Log in</button>
+                <button type="submit" className="btn" disabled = {this.isRegisterBtnDisabled()} onClick={() => this.props.history.push("/todo")}>Log in</button>
             </form>
             </div>
         )

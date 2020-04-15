@@ -8,9 +8,9 @@ class Navigation extends React.Component {
    render() {
       return(
          <div>
-          <NavLink to="/start"></NavLink>
-          <NavLink to="/register"></NavLink>
-          <NavLink to="/todolist"></NavLink>
+          <NavLink to="/start">Home</NavLink>
+          <NavLink to="/register">Register</NavLink>
+          <NavLink to="/todo">Todo</NavLink>
        </div>
       )
    }
